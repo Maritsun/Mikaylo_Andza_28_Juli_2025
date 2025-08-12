@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+</html>
+<html lang="id">
+    <head>
+    <title>login</title>
+    <style>
+    body {
+        font-family: Arial, Sans-Serif;
+        background-color: #4169E1;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .login-container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0.1);
+        width: 300px;
+        text-align: center;
+    }
+    
+    h1 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+    input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #8806CE;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #45a049;
+    }
+    
+    .error{
+        color: red;
+        font-size: 15px;
+    }
+    </style>
+</head>
+<body>
+    
+  <div class="login-container">
+     <h1>Login</h1>
+     <form id="ver_Fzrvv">
+       <input type="text" id="username" placeholder="Masukkan Username" />
+       <input type="password" id="password" placeholder="Masukan Password" />
+       <button type="submit">Login</button>
+       <div id="error-message" class="error"></div>
+       <p>Belum punya akun? <a href="#">Daftar akun</a></p>
+      </form>
+  </div>
+
+ <script>
+     document.getElementById("ver_Fzrvv").addEventListener('submit', function(event) {
+         event.preventDefault();
+    
+          var username = document.getElementById('username').value;
+         var password = document.getElementById('password').value;
+         var errorMessage = document.getElementById('error-message');
+    
+      if (username === '' || password ==='') {
+             errorMessage.textContent = 'ISI USERNAME DAN PASSWORD.';
+      } else if (username !== "Maritsun" || password !=='VioletDetector165') {
+          errorMessage.textContent = 'USERNAME ATAU PASSWORD SALAH. MOHON COBA LAGI.'
+      } else {
+         errorMessage.textContent = ''
+         alert('LOGIN SUKSES.');
+      }
+    
+   });
+</script>
+
+</body>
+</html>
